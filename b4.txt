@@ -1,0 +1,21 @@
+1, lấy tất cả dữ liệu ở bảng employees
+SELECT * FROM employees;
+
+2, lấy tên và lương của mỗi nhân viên từ bảng employees:
+SELECT first_name, last_name, salary FROM employees;
+
+3, lấy tất cả các nhân viên có lương lớn hơn 5000 từ bảng employees:
+SELECT * FROM employees WHERE salary > 5000;
+
+4, thêm một nhân viên mới vào bảng employees:
+INSERT INTO employees (first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+VALUES ('Huy', 'Tran', 'huytran@mail.com', '123456789', '22-01-2024', 'job01', 5000, 0.03, mng12, dpm43);
+
+5, tăng lương cho tất cả các nhân viên trong bảng employees lên 10%
+UPDATE employees SET salary = salary * 1.1;
+
+6, xóa nhân viên có ID là 10 từ bảng employees:
+DELETE FROM employees WHERE employee_id = 10;
+
+7, lấy tất cả các nhân viên có tên bắt đầu bằng chữ 'A' từ bảng employees
+SELECT * FROM employees WHERE first_name LIKE 'A%';
